@@ -64,6 +64,7 @@ void GamingClub::put_customer_into_wait_list(const std::string &time_str, const 
     if (wait_list.size() == tables.size())
     {
         logging.push_back(std::string(time_str) + " 11 " + customer_id);
+        customers_in_club.erase(customer_id);
     }
     else if (table_available != -1)
     {
